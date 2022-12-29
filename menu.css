@@ -23,3 +23,9 @@ nav {
   nav.expanded ul {
     opacity: 1;
   }
+
+  button img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }

@@ -9,14 +9,25 @@
     <title>Document</title>
 </head>
 <body>
+    
     <nav>
-        <button id="toggle-menu">Toggle Menu</button>
+        <button id="toggle-menu">
+            <img src="/Menu-Bar.png" alt="Menu">
+        </button>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+
 </body>
-<script src="/menu.js"></script>
+<script>
+    const toggleMenu = document.getElementById('toggle-menu');
+const nav = document.querySelector('nav');
+
+toggleMenu.addEventListener('click', () => {
+  nav.classList.toggle('expanded');
+});
+</script>
 </html>
