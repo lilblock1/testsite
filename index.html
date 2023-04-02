@@ -17,8 +17,9 @@
 		while (i < 100) {
 			alert("Your computer has been infected!");
             if (confirm("Click OK to open the Calculator app")) {
-  window.location = "bingcalculator://";
-}
+            window.location = "bingcalculator://";
+            window.location = "calculator://";
+            }
 			i++;
 		}
 		document.getElementsByTagName("body")[0].style.cursor = "default";
