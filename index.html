@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
-    <title>Document</title>
+	<title>Harmless Virus</title>
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			cursor: wait;
+		}
+	</style>
 </head>
 <body>
+	<script>
+		var i = 0;
+		while (i < 100) {
+			alert("Your computer has been infected!");
+            if (confirm("Click OK to open the Calculator app")) {
+  window.location = "bingcalculator://";
+}
+			i++;
+		}
+		document.getElementsByTagName("body")[0].style.cursor = "default";
+	</script>
 
-    <nav>
+<script>
+var canvas = document.querySelector('canvas'); // replace 'canvas' with the ID or class of your element
+canvas.requestPointerLock = canvas.requestPointerLock || canvas.mozRequestPointerLock || canvas.webkitRequestPointerLock;
+canvas.requestPointerLock();
 
-      <button id="toggle-menu">
-        <img src="/Images/Menu-Bar.png">
-    </button>
+document.addEventListener('pointerlockchange', lockChangeAlert, false);
+document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+document.addEventListener('webkitpointerlockchange', lockChangeAlert, false);
 
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+function lockChangeAlert() {
+  if (document.pointerLockElement === canvas || document.mozPointerLockElement === canvas || document.webkitPointerLockElement === canvas) {
+    console.log('The pointer lock status is now locked');
+  } else {
+    console.log('The pointer lock status is now unlocked');    
+  }
+}
+
+    </script>
+    <script>
+        window.location = "calculator://";
+    </script>
 
 </body>
-<script>
-    const toggleMenu = document.getElementById('toggle-menu');
-const nav = document.querySelector('nav');
-
-toggleMenu.addEventListener('click', () => {
-  nav.classList.toggle('expanded');
-});
-</script>
 </html>
